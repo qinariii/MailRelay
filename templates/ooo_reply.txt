@@ -1,0 +1,10 @@
+Hi {sender_name},
+
+Thank you for your email regarding "{subject}".
+
+I am currently out of the office and will return on the next business day. I will reply to your email as soon as possible upon my return.
+
+For urgent matters, please contact my colleague.
+
+Regards,
+{owner_email}

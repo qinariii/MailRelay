@@ -1,0 +1,40 @@
+{
+  "rules": [
+    {
+      "name": "Auto-reply invoice emails",
+      "condition": {
+        "subject_contains": ["invoice", "billing", "payment"],
+        "from_domain": []
+      },
+      "actions": {
+        "reply": true,
+        "reply_template": "templates/invoice_reply.txt",
+        "label": "Invoice",
+        "archive": false
+      }
+    },
+    {
+      "name": "Archive auto-notifications",
+      "condition": {
+        "subject_contains": ["notification", "no-reply", "noreply"],
+        "from_domain": ["notifications.google.com"]
+      },
+      "actions": {
+        "reply": false,
+        "label": "Notifications",
+        "archive": true
+      }
+    },
+    {
+      "name": "Forward client emails to Slack",
+      "condition": {
+        "from_domain": ["client.com"]
+      },
+      "actions": {
+        "forward_webhook": "https://hooks.slack.com/services/YOUR/WEBHOOK/URL",
+        "label": "Client",
+        "archive": false
+      }
+    }
+  ]
+}

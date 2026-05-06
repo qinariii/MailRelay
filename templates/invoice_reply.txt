@@ -1,0 +1,10 @@
+Hi {sender_name},
+
+Thank you for sending {subject}.
+
+We have received your email and will process your request within 1 business day.
+
+If you have any questions, feel free to reply to this email.
+
+Regards,
+Support Team
