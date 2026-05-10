@@ -9,4 +9,4 @@ COPY . .
 
 RUN mkdir -p logs data
 
-CMD ["python", "main.py"]
+CMD ["sh", "-c", "python main.py --auth && python main.py"]
