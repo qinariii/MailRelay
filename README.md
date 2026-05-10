@@ -243,8 +243,10 @@ Regards,
 Build and run with Docker:
 
 ```bash
+
 docker build -t gmail-bot .
-docker run -d \
+touch token.json
+docker run -it \
   --name gmail-bot \
   --env-file .env \
   -v $(pwd)/token.json:/app/token.json \
