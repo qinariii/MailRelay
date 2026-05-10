@@ -17,7 +17,7 @@ SCOPES = [
 def authenticate(credentials_path, token_path):
     creds = None
 
-    if os.path.exists(token_path):
+    if os.path.exists(token_path) and os.path.getsize(token_path) > 0:
         creds = Credentials.from_authorized_user_file(token_path, SCOPES)
         logger.info("Token found, loading from %s", token_path)
 
